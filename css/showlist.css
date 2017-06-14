@@ -1,0 +1,91 @@
+.nav {
+	min-width:100%;
+	overflow-x:auto ;
+	background-color: #1f2c5c;
+	padding:10px 0 ;
+}
+.navList{
+	width:1300px;
+	line-height: 20px;
+	margin:0 auto ;
+}
+.navList li{
+	float: left;
+	display: inline;
+	border-right: 1px solid #fff;
+}
+.navList .br0{border-right:0 ;}
+.navList a{
+	padding:0 10px; 
+	display: block;
+	color: #fff;
+	
+}
+.navList li:hover{
+	background-color: #2393F3;
+}
+.showList{
+	padding: 10px 0 0 20px;
+	width:1320px;
+	margin:0 auto;
+}
+.showList li{
+	background-color: #1f2c5c;
+	float: left;
+	width:200px;
+	text-align: center;
+	line-height: 20px;
+	margin:0 20px 20px 0;
+	height: 400px;
+	padding-top:1px;
+}
+.showList li div{
+	display: table-cell;
+	vertical-align: middle;
+	height: 400px;
+	text-align: center;
+}
+.showList li p{
+	color: #fff;
+}
+.showList li img{
+	vertical-align:middle;
+	width: 99%;
+	/*display: block;*/
+	border: 0;
+	margin-bottom: 10px;
+	cursor: pointer;
+}
+.showList li span{
+	display: inline-block;
+	width:0;
+	vertical-align: middle;
+	height:100%;
+}
+/*移动端*/
+@media only screen and (max-width: 767px) {
+	.content{
+		padding-top:110px;
+	}
+	.nav{
+		position:fixed;
+		top:0;
+		left:0;
+		z-index: 99;
+	}
+	.navList{
+		width:300px;
+	}
+	.navList li{
+		margin-bottom: 10px;
+	}
+	.showList{
+		padding-left:0;
+		width:100%;
+	}
+	.showList li{
+		float: none;
+		margin:0 auto 20px;
+		width:200px;
+	}
+}

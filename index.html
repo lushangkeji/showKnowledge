@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>美食</title>
+		<meta http-equiv="X-UA-Compatible" content="IE=11,IE=10,IE=9,IE=8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0, minimum-scale=1.0, maximum-scale=1.0">
+		<link rel="shortcut icon" type="image/ico" href="./images/favicon.ico" />
+		<link rel="stylesheet" type="text/css" href="./css/common.css" />
+		<link rel="stylesheet" type="text/css" href="./css/zoomify.min.css" />
+		<link rel="stylesheet" type="text/css" href="./css/showlist.css" />
+	</head>
+	<body>
+		<div class="content clearfix">
+			<nav class="nav">
+				<ul class="navList clearfix">
+					<li>
+						<a href="javascript:;" ui-sref="home">餐饮部</a>
+					</li>
+					<li>
+						<a href="javascript:;" ui-sref="kf">客房部</a>
+					</li>
+					<li class="br0">
+						<a href="javascript:;" ui-sref="qt">前厅服务与管理</a>
+					</li>
+				</ul>
+			</nav>
+			<ul class="showList clearfix" ui-view>
+				
+			</ul>
+		</div>
+	</body>
+	<script src="js/jquery.js"></script>
+	<!--<script src="js/require.js"></script>-->
+	<script src="js/angular.min.js"></script>
+	<script src="js/angular-ui-router.js"></script>
+	<script src="js/zoomify.min.js"></script>
+	<script>
+		var app=angular.module('app',['ui.router']);
+		app.config(['$urlRouterProvider', '$stateProvider', function($urlRouterProvider, $stateProvider){
+	        $urlRouterProvider.otherwise('/home');
+	        $stateProvider.state('home', {
+	            url : '/home',
+	            templateUrl : './cy.html'
+	        })
+	        .state('kf', {
+	            url : '/kf',
+	            templateUrl : './kf.html'
+	        })
+	        .state('qt', {
+	            url : '/qt',
+	            templateUrl : './qt.html'
+	        })
+	    }]);
+		app.controller('myCtr',['$scope'],function($scope){
+			
+		});
+		angular.bootstrap(document,['app']);
+		/*$('.showList li p').each(function(){
+			$('.showList li p').text($(this).siblings('img').attr('src'));
+		});*/
+	</script>
+</html>

@@ -1,0 +1,7 @@
+.knowledgeListBox{line-height: 30px;}
+.selKnowledgeType{margin-bottom: 10px;}
+.selKnowledgeType li{float: left; display: inline;line-height: 30px; border: 1px solid #ccc;padding:0 10px;cursor: pointer;}
+.selKnowledgeType .br0{border-right:0;}
+.selKnowledge{background-color: #00CA79; color: #fff;}
+.knowledgeList{line-height: 20px;}
+.leve21List,.level3List{padding-left:20px;}
