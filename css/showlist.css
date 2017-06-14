@@ -21,7 +21,7 @@
 	color: #fff;
 	
 }
-.navList li:hover{
+.navList li:hover,.active{
 	background-color: #2393F3;
 }
 .showList{

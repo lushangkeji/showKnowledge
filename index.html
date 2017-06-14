@@ -56,6 +56,10 @@
 			
 		});
 		angular.bootstrap(document,['app']);
+		$('.navList').on('click','li',function(){
+			$('.navList li').removeClass('active');
+			$(this).addClass('active');
+		});
 		/*$('.showList li p').each(function(){
 			$('.showList li p').text($(this).siblings('img').attr('src'));
 		});*/
